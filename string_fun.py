@@ -32,3 +32,16 @@ print(is_anagram("angel", "glean")) # True
 print(is_anagram("angel", "GLEAN")) # True
 print(is_anagram("angel", "gleann")) # False
 print(is_anagram("Pickles", "Eggplant")) # False
+
+
+def is_pangram(input_string):
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    input_string = input_string.lower()
+
+    for char in alphabet:
+        if char not in input_string:
+            return False
+
+    return True
+print(is_pangram("A quick brown fox jumps over the")) # False
+print(is_pangram("A quick brown fox jumps over the lazy dog")) # True
